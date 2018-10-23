@@ -12,4 +12,26 @@ $(document).ready(function () {
     }
   });
 
+// hierarchy
+
+  (function hierarchy(element) {
+
+    element.each(function () {
+      var _this = $(this);
+      var childrenItem = _this.children('.hierarchy-item');
+      var hasChildrenItem = false;
+
+      childrenItem.length != 0 ? hasChildrenItem = true : hasChildrenItem = false;
+
+      hasChildrenItem ? _this.addClass('hasChildren') : null ;
+
+    })
+
+  })($('.hierarchy-item'));
+
+  $('.hierarchy-item .icon').click(function () {
+    $(this).parent().parent().toggleClass('open');
+  });
+
+
 });

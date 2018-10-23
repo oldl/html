@@ -1,0 +1,80 @@
+@mixin hover {
+  &:hover {
+    @content;
+  }
+}
+
+@mixin hover-all {
+  &:hover {
+    @content;
+  }
+
+  &:active {
+    @content;
+  }
+
+  &:focus {
+    @content;
+  }
+}
+
+@mixin max1199 {
+  @media (max-width: 1199px) {
+    @content;
+  }
+}
+
+
+@mixin max991 {
+  @media (max-width: 991px) {
+    @content;
+  }
+}
+
+@mixin max768 {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin max640 {
+  @media (max-width: 640px) {
+    @content;
+  }
+}
+
+@mixin max320 {
+  @media (max-width: 320px) {
+    @content;
+  }
+}
+
+@mixin media($resolutions) {
+  @media (max-width: $resolutions) {
+    @content;
+  }
+}
+
+@mixin background-gradient ($firstColor, $secondColor) {
+  background: $firstColor;
+  background: -moz-linear-gradient(left, $firstColor 0%, $secondColor 100%);
+  background: -webkit-linear-gradient(left, $firstColor 0%,$secondColor 100%);
+  background: linear-gradient(to right, $firstColor 0%,$secondColor 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$firstColor, endColorstr=$secondColor,GradientType=1 );
+}
+
+
+@mixin placeholder {
+  input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    @content;
+  }
+  input::-moz-placeholder { /* Firefox 19+ */
+    @content;
+  }
+  input:-ms-input-placeholder { /* IE 10+ */
+    @content;
+  }
+  input:-moz-placeholder { /* Firefox 18- */
+    @content;
+  }
+}

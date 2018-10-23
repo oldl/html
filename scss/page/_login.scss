@@ -1,0 +1,167 @@
+.login-page {
+
+}
+
+.login-intro,
+.login-form {
+  float: left;
+  width: 50%;
+  height: 100%;
+  min-height: 100vh;
+}
+
+.login-intro {
+  position: relative;
+  background: url('../img/login-bg.jpg') center no-repeat;
+  background-size: cover;
+  padding: 70px 40px 70px 50px;
+  color: $white;
+
+  .logo {
+    margin-bottom: 200px;
+  }
+
+  h1 {
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    font-family: $font-open-sans;
+    font-size: $fs-extra-large;
+    font-weight: 400;
+    color: $white;
+  }
+
+  &:after {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(184, 13, 87, 0.8);
+    z-index: 0;
+  }
+
+  &-content {
+    position: relative;
+    z-index: 10;
+  }
+}
+
+.login-form {
+  padding: 13px 30px;
+  background-color: $white;
+  position: relative;
+  z-index: 0;
+}
+
+.login-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 160px;
+
+  .close-icon {
+    font-size: 32px;
+  }
+}
+
+.login-form-content {
+  width: 100%;
+  max-width: 340px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 13px;
+
+  h3 {
+    margin-bottom: 60px;
+  }
+
+  input {
+    display: block;
+    width: 100%;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid #EBEDF2;
+    font-size: 14px;
+    line-height: 40px;
+    margin-bottom: 22px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .input-container {
+    position: relative;
+  }
+
+  .input-effect ~ .focus-border {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 1px;
+    transition: 0.4s;
+    background-color: $pink;
+  }
+  .input-effect:focus ~ .focus-border,
+  .has-content.input-effect ~ .focus-border {
+    width: 100%;
+    transition: 0.4s;
+    left: 0;
+  }
+  .input-effect ~ label {
+    position: absolute;
+    left: 0;
+    top: 9px;
+    color: #aaa;
+    transition: 0.3s;
+    letter-spacing: 0.5px;
+    z-index: -1;
+  }
+  .input-effect:focus ~ label, .has-content.input-effect ~ label {
+    top: -16px;
+    font-size: 12px;
+    transition: 0.3s;
+  }
+
+  .btn-primary {
+    width: 100%;
+    max-width: 245px;
+    margin: 30px auto;
+  }
+
+  .forgot-password {
+    display: block;
+  }
+}
+
+@media (max-width: 769px) {
+  .login-intro,
+  .login-form {
+    float: none;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    padding: 30px 15px;
+  }
+
+  .login-intro-content {
+    .logo {
+      margin-bottom: 60px;
+    }
+  }
+
+  .login-nav {
+    margin-bottom: 60px;
+  }
+
+  .login-form-content {
+    h3 {
+      margin-bottom: 40px;
+    }
+  }
+}

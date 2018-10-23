@@ -1,0 +1,25 @@
+.btn {
+  line-height: 1.4;
+  padding: 0.375rem 1rem;
+}
+
+.btn-primary {
+  background-color: $pink;
+  border-color: $pink;
+  line-height: 2.4;
+
+  @include hover-all {
+    background-color: $pink-hover;
+    border-color: $pink-hover;
+  }
+}
+
+.btn-empty {
+  color: $grey;
+  border-color: $grey;
+
+  @include hover-all {
+    color: $pink;
+    border-color: $pink;
+  }
+}

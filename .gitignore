@@ -1,0 +1,13 @@
+.sass-cache/
+*~
+*.zip
+*.rar
+Guardfile
+bower_components/
+node_modules/
+build/
+*.log
+*.sublime-project
+*.sublime-workspace
+.idea/
+dolalex_html/

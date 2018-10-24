@@ -1,0 +1,62 @@
+.custom-checkbox,
+.custom-radio {
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    display:none;
+  }
+
+  input[type="checkbox"] + label,
+  input[type="radio"] + label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+    color: $pink-text;
+
+    &:before {
+      content: "";
+      display: inline-block;
+      height: 15px;
+      width: 15px;
+      margin: 0 5px 0 0;
+      border: 1px solid #B80D57;
+    }
+  }
+
+  input[type="checkbox"] + label {
+    &:before {
+      border-width: 2px;
+      border-radius: 4px;
+    }
+  }
+
+  input[type="radio"] + label {
+    &:before {
+      border-radius: 50%;
+    }
+  }
+
+  input[type="radio"]:checked + label::before {
+    background-color: $pink;
+  }
+
+  input[type="radio"]:disabled + label {
+    color: $grey;
+
+    &:before {
+      border-color: $grey;
+    }
+  }
+
+  input[type="checkbox"]:disabled + label {
+    color: $grey;
+
+    &:before {
+      border-color: $grey;
+    }
+  }
+
+
+
+}

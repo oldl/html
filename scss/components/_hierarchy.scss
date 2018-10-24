@@ -34,6 +34,10 @@
     i {
       color: $pink;
     }
+
+    &:hover {
+      background-color: #F6F6F6;
+    }
   }
 
   &:hover {
@@ -93,6 +97,10 @@
     &>.hierarchy-item {
       display: block;
     }
+
+    &>.hierarchy-card .icon i {
+      transform: rotate(-90deg);
+    }
   }
 
   &.hasChildren {
@@ -101,5 +109,22 @@
         display: block;
       }
     }
+  }
+}
+
+@media (max-width: $screen-sm) {
+  .hierarchy-card {
+    max-width: none;
+    display: block;
+    padding: 12px;
+  }
+
+  .hierarchy-avatar {
+    margin: 0 auto 10px;
+  }
+
+  .hierarchy-content {
+    width: 100%;
+    padding-left: 0;
   }
 }

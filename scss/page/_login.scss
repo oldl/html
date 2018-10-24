@@ -79,55 +79,6 @@
     margin-bottom: 60px;
   }
 
-  input {
-    display: block;
-    width: 100%;
-    border: none;
-    background: transparent;
-    border-bottom: 1px solid #EBEDF2;
-    font-size: 14px;
-    line-height: 40px;
-    margin-bottom: 22px;
-
-    &:focus {
-      outline: none;
-    }
-  }
-
-  .input-container {
-    position: relative;
-  }
-
-  .input-effect ~ .focus-border {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 0;
-    height: 1px;
-    transition: 0.4s;
-    background-color: $pink;
-  }
-  .input-effect:focus ~ .focus-border,
-  .has-content.input-effect ~ .focus-border {
-    width: 100%;
-    transition: 0.4s;
-    left: 0;
-  }
-  .input-effect ~ label {
-    position: absolute;
-    left: 0;
-    top: 9px;
-    color: #aaa;
-    transition: 0.3s;
-    letter-spacing: 0.5px;
-    z-index: -1;
-  }
-  .input-effect:focus ~ label, .has-content.input-effect ~ label {
-    top: -16px;
-    font-size: 12px;
-    transition: 0.3s;
-  }
-
   .btn-primary {
     width: 100%;
     max-width: 245px;

@@ -1,17 +1,27 @@
 .btn {
-  line-height: 1.4;
-  padding: 0.375rem 1rem;
+  line-height: 38px;
+  padding: 0 1rem;
+  font-size: 15px;
 }
 
 .btn-primary {
   background-color: $pink;
   border-color: $pink;
-  line-height: 2.4;
 
   @include hover-all {
     background-color: $pink-hover;
     border-color: $pink-hover;
   }
+}
+
+.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle {
+  background-color: $pink-hover;
+  border-color: $pink-hover;
+}
+
+.btn-primary-empty {
+  border-color: $pink;
+  color: $pink;
 }
 
 .btn-empty {
@@ -21,5 +31,57 @@
   @include hover-all {
     color: $pink;
     border-color: $pink;
+  }
+
+  &.btn-green {
+    border-color: $green;
+    color: $green;
+
+    @include hover-all {
+      background: $green;
+      color: $white;
+    }
+  }
+}
+
+.btn-link {
+  color: $pink;
+
+  @include hover-all {
+    color: $pink;
+    text-decoration: none;
+  }
+}
+
+.btn-large {
+  font-size: 18px;
+  line-height: 50px;
+}
+
+.btn-nav {
+  font-size: 16px;
+  min-width: 145px;
+  position: relative;
+
+  i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &.btn-nav-prev {
+    padding-left: 2rem;
+
+    i {
+      left: 15px;
+    }
+  }
+
+  &.btn-nav-next {
+    padding-right: 2rem;
+
+    i {
+      right: 15px;
+    }
   }
 }

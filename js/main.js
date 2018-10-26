@@ -57,9 +57,6 @@ $(document).ready(function () {
   });
 
   SetRatingStar();
-  $(document).ready(function() {
-
-  });
 
   // Range
 

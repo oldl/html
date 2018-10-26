@@ -8704,6 +8704,7 @@ a.text-dark:hover, a.text-dark:focus {
   padding: 16px 22px;
   position: relative;
   z-index: 10;
+  cursor: pointer;
 }
 .hierarchy-card .icon {
   display: none;
@@ -9430,6 +9431,10 @@ textarea {
   background-size: cover;
   cursor: pointer;
 }
+.slider-range.clicked {
+  outline: none;
+  border: none;
+}
 .slider-range.clicked::-webkit-slider-thumb {
   background: url("../img/range-hover.png");
   background-size: cover;
@@ -9437,6 +9442,9 @@ textarea {
 .slider-range.clicked::-moz-range-thumb {
   background: url("../img/range-hover.png");
   background-size: cover;
+}
+.slider-range:focus {
+  outline: none;
 }
 
 .breadcrumb {
@@ -9576,10 +9584,19 @@ ul.list-style-disc li:before {
 }
 
 .rating {
-  display: flex;
-  align-items: center;
+  border: none;
+  float: left;
 }
-.rating-item {
+.rating > input {
+  display: none;
+}
+.rating > label {
+  color: #ddd;
+  float: right;
+}
+.rating > label:before {
+  display: block;
+  content: '1';
   border: 1px solid #B80D57;
   border-radius: 4px;
   width: 26px;
@@ -9591,12 +9608,52 @@ ul.list-style-disc li:before {
   margin-right: 20px;
   cursor: pointer;
 }
-.rating-item.active {
+.rating #label-rate-1:before {
+  content: '1';
+}
+.rating #label-rate-2:before {
+  content: '2';
+}
+.rating #label-rate-3:before {
+  content: '3';
+}
+.rating #label-rate-4:before {
+  content: '4';
+}
+.rating #label-rate-5:before {
+  content: '5';
+}
+.rating #label-rate-6:before {
+  content: '6';
+}
+.rating #label-rate-7:before {
+  content: '7';
+}
+.rating #label-rate-8:before {
+  content: '8';
+}
+.rating #label-rate-9:before {
+  content: '9';
+}
+.rating #label-rate-10:before {
+  content: '10';
+}
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+.rating > input:checked ~ label:before,
+.rating:not(:checked) > label:hover:before,
+.rating:not(:checked) > label:hover ~ label:before {
   background-color: #B80D57;
   color: #ffffff;
 }
-.rating-item:last-child {
-  margin-right: 0;
+
+/* hover previous stars in list */
+.rating > input:checked + label:hover:before,
+.rating > input:checked ~ label:hover:before,
+.rating > label:hover ~ input:checked ~ label:before,
+.rating > input:checked ~ label:hover ~ label:before {
+  background-color: #B80D57;
+  color: #ffffff;
 }
 
 @font-face {

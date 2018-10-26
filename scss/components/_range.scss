@@ -48,6 +48,9 @@
   }
 
   &.clicked {
+    outline: none;
+    border: none;
+
     &::-webkit-slider-thumb {
       background: url('../img/range-hover.png');
       background-size: cover;
@@ -57,5 +60,9 @@
       background: url('../img/range-hover.png');
       background-size: cover;
     }
+  }
+
+  &:focus {
+    outline: none;
   }
 }

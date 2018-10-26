@@ -157,28 +157,81 @@ ul {
 }
 
 .rating {
-  display: flex;
-  align-items: center;
+  border: none;
+  float: left;
 
-  &-item {
-    border: 1px solid $pink;
-    border-radius: 4px;
-    width: 26px;
-    height: 26px;
-    line-height: 26px;
-    font-size: 14px;
-    color: $pink;
-    text-align: center;
-    margin-right: 20px;
-    cursor: pointer;
+  &>input {
+    display: none;
+  }
 
-    &.active {
-      background-color: $pink;
-      color: $white;
+  &>label {
+    color: #ddd;
+    float: right;
+
+    &:before {
+      display: block;
+      content: '1';
+      border: 1px solid $pink;
+      border-radius: 4px;
+      width: 26px;
+      height: 26px;
+      line-height: 26px;
+      font-size: 14px;
+      color: $pink;
+      text-align: center;
+      margin-right: 20px;
+      cursor: pointer;
     }
+  }
 
-    &:last-child {
-      margin-right: 0;
-    }
+  #label-rate-1:before {
+    content: '1';
+  }
+  #label-rate-2:before {
+    content: '2';
+  }
+  #label-rate-3:before {
+    content: '3';
+  }
+  #label-rate-4:before {
+    content: '4';
+  }
+  #label-rate-5:before {
+    content: '5';
+  }
+  #label-rate-6:before {
+    content: '6';
+  }
+  #label-rate-7:before {
+    content: '7';
+  }
+  #label-rate-8:before {
+    content: '8';
+  }
+  #label-rate-9:before {
+    content: '9';
+  }
+  #label-rate-10:before {
+    content: '10';
+  }
+}
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+.rating > input:checked ~ label, /* show gold star when clicked */
+.rating:not(:checked) > label:hover, /* hover current star */
+.rating:not(:checked) > label:hover ~ label {
+  &:before {
+    background-color: $pink;
+    color: $white;
+  }
+} /* hover previous stars in list */
+
+.rating > input:checked + label:hover, /* hover current star when changing rating */
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating > input:checked ~ label:hover ~ label {
+  &:before {
+    background-color: $pink;
+    color: $white;
   }
 }

@@ -420,22 +420,84 @@
       <textarea placeholder="Enter your message"></textarea>
 
       <div class="mb-4"></div>
+      
+      <p class="text-pink">Rating question  </p>
+      <p class="text-grey mb-4">(1 = Très faible, 10 = Très forte)</p>
 
-      <div class="rating">
-        <div class="rating-item" data-rating="1">1</div>
-        <div class="rating-item" data-rating="2">2</div>
-        <div class="rating-item" data-rating="3">3</div>
-        <div class="rating-item" data-rating="4">4</div>
-        <div class="rating-item" data-rating="5">5</div>
-        <div class="rating-item" data-rating="6">6</div>
-        <div class="rating-item" data-rating="7">7</div>
-        <div class="rating-item" data-rating="8">8</div>
-        <div class="rating-item" data-rating="9">9</div>
-        <div class="rating-item" data-rating="10">10</div>
-        <input type="hidden" name="whatever1" class="rating-value" value="7">
-      </div>
+      <fieldset class="rating">
 
-      <div style="margin-bottom: 90px;"></div>
+        <input
+            type="radio"
+            id="rate-10"
+            name="rating"
+            value="10" />
+        <label id="label-rate-10" for="rate-10"></label>
+
+        <input
+            type="radio"
+            id="rate-9"
+            name="rating"
+            value="9" />
+        <label id="label-rate-9" for="rate-9"></label>
+
+        <input
+            type="radio"
+            id="rate-8"
+            name="rating"
+            value="8" />
+        <label id="label-rate-8" for="rate-8"></label>
+
+        <input
+            type="radio"
+            id="rate-7"
+            name="rating"
+            value="7" />
+        <label id="label-rate-7" for="rate-7"></label>
+
+        <input
+            type="radio"
+            id="rate-6"
+            name="rating"
+            value="6" />
+        <label id="label-rate-6" for="rate-6"></label>
+
+        <input
+            type="radio"
+            id="rate-5"
+            name="rating"
+            value="5" />
+        <label id="label-rate-5" for="rate-5"></label>
+
+        <input
+            type="radio"
+            id="rate-4"
+            name="rating"
+            value="4" />
+        <label id="label-rate-4" for="rate-4"></label>
+
+        <input
+            type="radio"
+            id="rate-3"
+            name="rating"
+            value="3" />
+        <label id="label-rate-3" for="rate-3"></label>
+
+        <input
+            type="radio"
+            id="rate-2"
+            name="rating"
+            value="2" />
+        <label id="label-rate-2" for="rate-2"></label>
+
+        <input
+            type="radio"
+            id="rate-1"
+            name="rating"
+            value="1" />
+        <label id="label-rate-1" for="rate-1"></label>
+      </fieldset>
+
+      <div style="margin-bottom: 190px;"></div>
 
       <form>
         <div class="form-group">

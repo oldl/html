@@ -9419,7 +9419,7 @@ textarea {
   width: 19px;
   height: 20px;
   border: 0;
-  background: url("../img/range.png");
+  background: url("../img/range-hover.png");
   background-size: cover;
   cursor: pointer;
 }
@@ -9427,23 +9427,16 @@ textarea {
   width: 19px;
   height: 20px;
   border: 0;
-  background: url("../img/range.png");
+  background: url("../img/range-hover.png");
   background-size: cover;
   cursor: pointer;
 }
-.slider-range.clicked {
-  outline: none;
-  border: none;
-}
-.slider-range.clicked::-webkit-slider-thumb {
-  background: url("../img/range-hover.png");
-  background-size: cover;
-}
-.slider-range.clicked::-moz-range-thumb {
-  background: url("../img/range-hover.png");
-  background-size: cover;
-}
 .slider-range:focus {
+  outline: none;
+}
+
+input[type=range]::-moz-focus-outer {
+  border: 0;
   outline: none;
 }
 

@@ -58,11 +58,5 @@ $(document).ready(function () {
 
   SetRatingStar();
 
-  // Range
-
-  $('.slider-range').click(function () {
-    $(this).addClass('clicked');
-  });
-
 
 });

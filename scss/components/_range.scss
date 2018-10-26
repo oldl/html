@@ -33,7 +33,7 @@
     width: 19px;
     height: 20px;
     border: 0;
-    background: url('../img/range.png');
+    background: url('../img/range-hover.png');
     background-size: cover;
     cursor: pointer;
   }
@@ -42,27 +42,17 @@
     width: 19px;
     height: 20px;
     border: 0;
-    background: url('../img/range.png');
+    background: url('../img/range-hover.png');
     background-size: cover;
     cursor: pointer;
-  }
-
-  &.clicked {
-    outline: none;
-    border: none;
-
-    &::-webkit-slider-thumb {
-      background: url('../img/range-hover.png');
-      background-size: cover;
-    }
-
-    &::-moz-range-thumb {
-      background: url('../img/range-hover.png');
-      background-size: cover;
-    }
   }
 
   &:focus {
     outline: none;
   }
+}
+
+input[type=range]::-moz-focus-outer {
+  border: 0;
+  outline: none;
 }

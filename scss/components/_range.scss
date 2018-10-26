@@ -26,24 +26,36 @@
     content: 'Good';
     color: $pink-text;
   }
-}
 
-.slider-range::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 19px;
-  height: 20px;
-  border: 0;
-  background: url('../img/range.png');
-  background-size: cover;
-  cursor: pointer;
-}
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 19px;
+    height: 20px;
+    border: 0;
+    background: url('../img/range.png');
+    background-size: cover;
+    cursor: pointer;
+  }
 
-.slider-range::-moz-range-thumb {
-  width: 19px;
-  height: 20px;
-  border: 0;
-  background: url('../img/range.png');
-  background-size: cover;
-  cursor: pointer;
+  &::-moz-range-thumb {
+    width: 19px;
+    height: 20px;
+    border: 0;
+    background: url('../img/range.png');
+    background-size: cover;
+    cursor: pointer;
+  }
+
+  &.clicked {
+    &::-webkit-slider-thumb {
+      background: url('../img/range-hover.png');
+      background-size: cover;
+    }
+
+    &::-moz-range-thumb {
+      background: url('../img/range-hover.png');
+      background-size: cover;
+    }
+  }
 }

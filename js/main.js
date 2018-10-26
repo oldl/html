@@ -29,8 +29,8 @@ $(document).ready(function () {
 
   })($('.hierarchy-item'));
 
-  $('.hierarchy-item .icon').click(function () {
-    $(this).parent().parent().toggleClass('open');
+  $('.hierarchy-item .hierarchy-card').click(function () {
+    $(this).parent().toggleClass('open');
   });
 
   // Custom Select
@@ -59,6 +59,12 @@ $(document).ready(function () {
   SetRatingStar();
   $(document).ready(function() {
 
+  });
+
+  // Range
+
+  $('.slider-range').click(function () {
+    $(this).addClass('clicked');
   });
 
 

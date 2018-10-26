@@ -9412,7 +9412,6 @@ textarea {
   content: 'Good';
   color: #700961;
 }
-
 .slider-range::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
@@ -9423,7 +9422,6 @@ textarea {
   background-size: cover;
   cursor: pointer;
 }
-
 .slider-range::-moz-range-thumb {
   width: 19px;
   height: 20px;
@@ -9431,6 +9429,14 @@ textarea {
   background: url("../img/range.png");
   background-size: cover;
   cursor: pointer;
+}
+.slider-range.clicked::-webkit-slider-thumb {
+  background: url("../img/range-hover.png");
+  background-size: cover;
+}
+.slider-range.clicked::-moz-range-thumb {
+  background: url("../img/range-hover.png");
+  background-size: cover;
 }
 
 .breadcrumb {
